@@ -10,6 +10,53 @@ a {
   color: #191919;
 }
 
+.btn {
+  padding: 1rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.btn[disabled] {
+  background: #eceeef;
+  border: none;
+}
+
+.btn[disabled]:hover {
+  background: #eceeef;
+  color: white;
+  cursor: not-allowed;
+}
+
+.btn-light {
+  background: white;
+  border: 1px solid #40474f;
+}
+
+.btn-light:hover {
+  background: #40474f;
+  color: #eee;
+  cursor: pointer;
+}
+
+.btn-dark {
+  background: #40474f;
+  color: white;
+}
+
+.btn-dark:hover {
+  background: white;
+  color: #40474f;
+  cursor: pointer;
+}
+
+.my-1 {
+  margin-top: 1rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
 #root {
   font-family: 'Nunito Sans', sans-serif;
   color: #191919;
@@ -82,8 +129,70 @@ a {
           justify-content: center;
 }
 
-#HomeScreen .container {
+#HomeScreen .container,
+#ProductScreen .container {
   min-height: 86vh;
+}
+
+#ProductScreen .container {
+  margin: 1rem 9px;
+}
+
+#ProductScreen .container .ProductScreen__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#ProductScreen .container .ProductScreen__grid--middle .info__item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eceeef;
+}
+
+#ProductScreen .container .ProductScreen__grid--middle .info__item--name {
+  font-size: 2rem;
+}
+
+#ProductScreen .container .ProductScreen__grid--middle .info__item--price {
+  font-size: 1.5rem;
+}
+
+#ProductScreen .container .ProductScreen__grid--middle .info__item--text {
+  font-size: 1.2rem;
+}
+
+#ProductScreen .container .ProductScreen__grid--middle .info__item:last-child {
+  border: none;
+}
+
+#ProductScreen .container .ProductScreen__grid--right .sidebar {
+  border: 1px solid #40474f;
+}
+
+#ProductScreen .container .ProductScreen__grid--right .sidebar__item {
+  width: 100%;
+  border-bottom: 1px solid #40474f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#ProductScreen .container .ProductScreen__grid--right .sidebar__item:last-child {
+  border: none;
+}
+
+#ProductScreen .container .ProductScreen__grid--right .sidebar__item--price, #ProductScreen .container .ProductScreen__grid--right .sidebar__item--status {
+  margin: 1rem 1rem;
+  font-size: 1.2rem;
+}
+
+#ProductScreen .container .ProductScreen__grid--right .sidebar__item .btn {
+  margin: 1rem auto;
 }
 
 #Product .card {
