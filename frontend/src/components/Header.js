@@ -1,20 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <header id='Header'>
       <nav className='navbar'>
         <div className='container'>
-          <a className='navbar__brand' href='/'>
+          <Link className='navbar__brand' to='/'>
             React-Shop
-          </a>
+          </Link>
           <div className='navbar__group--right'>
-            <a href='/login'>
+            <Link to='/login'>
               <i className='fas fa-user'></i> Sign In
-            </a>
-            <a href='/cart'>
+            </Link>
+            <Link to='/cart'>
               <i className='fas fa-shopping-cart'></i> Cart
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
