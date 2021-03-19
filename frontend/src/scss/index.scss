@@ -118,8 +118,7 @@ a {
   }
 }
 
-#HomeScreen,
-#ProductScreen {
+#HomeScreen {
   .container {
     min-height: 86vh;
   }
@@ -127,6 +126,7 @@ a {
 
 #ProductScreen {
   .container {
+    min-height: 84.8vh;
     margin: 1rem 9px;
     .ProductScreen__grid {
       display: grid;
