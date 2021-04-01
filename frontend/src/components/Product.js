@@ -8,7 +8,7 @@ const Product = ({ product }) => {
       <div className='card'>
         <div className='card__container'>
           <Link to={`/product/${product._id}`} className='card__link--top'>
-            <img className='card__img' src={product.image} />
+            <img className='card__img' src={product.image} alt={product.name} />
           </Link>
           <Link to={`/product/${product._id}`} className='card__text--h3'>
             {product.name}
